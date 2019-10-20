@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				list-style: none;
+			}
+
+			.box2 a {
+				color: #fff;
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 20px;
+				padding-top: 4px;
+			}
+
+			.box2 a:hover {
+				border-bottom: 1px solid #fff;
+			}
+
+			.box2 span {
+				color: #fff;
+				display: inline-block;
+				vertical-align: middle;
+				padding-top: 4px;
+			}
+			   p {
+				   transition: 3s;
+			   }
+			   .fade-leave,
+			           .fade-enter-to {
+			               opacity: 1;
+			           }
+			   
+			           .fade-leave-active,
+			           .fade-to-active {
+			           }
+			   
+			           .fade-leave-to,
+			           .fade-enter {
+			               opacity: 0;
+			           }
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div style="position: relative;">
+				<div style="background: transparent;min-height: 20px;padding: 30px 60px;line-height: 50px;position: absolute;top: 0;z-index: 5;" class="box2">
+					<img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvMmE4YWZmM2RkZmJkYWU5YmFjMjhmOTczNGUzOTE1NWMucG5n.png"
+					 style="width: 131px;vertical-align: middle;">
+					<div style="display: inline-block;padding: 0 40px;width: 1000px;">
+						<a href="#/">首页</a>
+						<a href="#/no2">产品发布</a>
+						<a href="#/no5">资讯发布</a>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cDovLzU3ZTI0M2FhYTc3OWEudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMC9lNjQyMzA1ZmUwZjdjY2QxYjdjZTM5ZjEwMzNmZmViZi5wbmc_p_p100_p_2FYXR0YWNobWVudF9pZD05ODUw.png"
+					 style="width: 27px;vertical-align: middle;border-right: 2px solid #fff;padding-right: 5px;">
+					<span style="font-size: 26px;">
+						<span>4</span><span style="font-size: 20px;">00200200</span>
+					</span>
+				</div>
+				<div><router-view></router-view></div>
+			</div>
+		</div>
+		<template id="no1">
+			<div>
+				<div style="width: 100%; background: url(http://57e243aaa779a.t73.qifeiye.com/qfy-content/uploads/2016/10/f549634402d680ae8cccd5a6039000b5.jpg);min-height: 800px;background-size: cover;">
+					<div style="width: 100%;min-height: 800px;background: rgba(28,28,28,.7);position: relative;overflow: hidden;">
+						<div style="overflow: hidden;width: 900px;">
+							<div class="shadow" style=" transition: 3s;overflow: hidden;">
+							 <transition :name="handle"  v-for="(i,$index) in arr">
+							<div  v-if="$index==type" style="overflow: hidden;position: absolute;color: #fff;top: 380px;left: 400px;">
+							 <p style="font-size:36px">{{ i.title }}</p >
+							  <p style="font-size:20px">{{ i.english }}</p >
+							 </div>
+							 </transition>
+							</div>
+						</div>
+							
+					</div>
+					
+				</div>
+			</div>
+		</template>
+		<template id="no2">
+			<div>
+				
+				<div style="width: 100%; min-height: 340px;background-size:100% 100%;">
+					<div style="width: 100%;min-height: 340px;background: rgba(28,28,28,.6);position: relative;overflow: hidden;">
+					<img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvMDViZjRkNzAxMDU2NTNkNjI2ODQ2NmY4ZGY4NzFmM2YuanBn.jpg" 
+					style="position: absolute;top: -400px;">
+					</div>
+					<div style="width: 100%;min-height: 340px;background: rgba(28,28,28,.6);position: absolute;top: 0;">
+					</div>
+				</div>
+				<div style="min-height: 500px;background: #f3f3f3;text-align: center;padding-top: 100px;">
+					<div style="font-family: 微软雅黑;font-size: 34px;font-weight: normal;font-style: normal;color: #494949;margin-bottom: 20px;">产品发布</div>
+					<div style="font-size: 14;color: #696969;margin-bottom: 60px;">応捠捡换攴朰朸妀夲夳夵壱，売圢圤圥圦圧圪咐咑厺厼厽帄帇</div>
+					<img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvNGQxZGJmMGU0MTg5YWUxYWU1ZjNmZDkyZjc3OWRhMGItNzY2eDUwMC5wbmc_p_p100_p_3D.png" 
+					style="width: 766px;">
+				</div>
+			</div>
+		</template>
+		<template id="no3">
+			<div>
+				<div style="width: 100%; min-height: 340px;background-size:100% 100%;">
+					<div style="width: 100%;min-height: 340px;background: rgba(28,28,28,.6);position: relative;overflow: hidden;">
+					<img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvOTk4ZGE5MWY4MGZiNDg3NjU4MjI2MDQ1NzBhY2RmNDYuanBn.jpg" 
+					style="position: absolute;top: -400px;">
+					</div>
+					<div style="width: 100%;min-height: 340px;background: rgba(28,28,28,.6);position: absolute;top: 0;">
+					</div>
+				</div>
+				<div style="min-height: 500px;">
+					<div style="display: flex;padding: 100px 200px;">
+						<div style="width: 200px;margin-right: 100px;overflow: hidden;">
+							<div style="color: #808080;padding-top: 30px;">
+								<a href="#/no5/"style="color: #808080;padding: 14px;display: inline-block;width: 200px;">全部发布</a>
+							</div>
+							<div>
+								<a href="#/no5/no2"style="color: #808080;padding: 14px;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;display: inline-block;width: 200px;">公司新闻</a>
+							</div>
+							<div>
+								<a href="#/no5/no3"style="color: #808080;padding: 14px;display: inline-block;width: 200px;">行业资讯</a>
+							</div>
+							
+						</div>
+						<div>
+							<router-view></router-view>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		<template id="no7">
+			<div>
+				
+				<n4></n4>
+				<n4></n4>
+				<n4></n4>
+			</div>
+		</template>
+		<template id="no8">
+			<div>
+				<n4></n4>
+				<n4></n4>
+			</div>
+		</template>
+		<template id="no9">
+			<div>
+				<n4></n4>
+			</div>
+		</template>
+		<template id="n4">
+			<div style="display: flex;border-bottom: 1px solid #ccc;padding-bottom: 20px;margin-top: 20px;">
+				<div style="padding-right: 10px;">
+					<slot name="n3"><img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvOWVmMDY3ODQ0ZDIzZmFiZDA2Y2NkNjVkZGY2MWQyZDgtMTgweDEyMC5qcGc_p_p100_p_3D.jpg" 
+					style="width: 200px;"></slot>
+				</div>
+				<div style="">
+					<slot name="n1"><div style=" color: #666666;font-size: 18px;font-family: 微软雅黑;line-height: 18px;">	北京130多家工业企业采取停限产措施应对雾霾</div></slot>
+					<div style="font-style: 11px;color: #4cd7de;padding-top: 10px;">发布日期：2017-03-14</div>
+					<slot name="n2"><div style="padding: 20px 0;color: #999999;font-size: 13px;font-family: 微软雅黑;line-height: 22px;padding-right: 20px;">起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2015年底，在起飞页上创建的网站已超过10万+。</div></slot>
+				
+				</div>
+				
+			</div>
+		</template>
+	</body>
+	<script src="vue.js"></script>
+	<script src="vue-router.js"></script>
+	<script>
+		Vue.component('n4', {
+			template: "#n4",
+		
+		})
+		var routes = [{
+				path: '/',
+				component: {
+					template: '#no1',
+					data(){
+					  return{
+					   handle:"fade",
+					   type:0,
+					   arr:[
+					   {
+					    title:"我们无法做到完美，  但追求完美能让人卓越",
+					    english:"Perfection’snot attainable, but if we chase it we can catch excellence."
+					   },
+					   {
+					    title:"我们无法做到完美",
+					    english:"Perfection’snot attainable"
+					   },
+					   {
+					    title:"但追求完美能让人卓越",
+					    english:"but if we chase it we can catch excellence."
+					   }
+					  
+					   ]
+					  }
+					 },
+					 created(){
+					  setInterval(()=>{
+					   this.type++
+					if(this.type >= this.arr.length){
+					   this.type = 0
+					}
+					  },3000)
+					 }
+				},
+				
+			},
+			{
+				path: '/no2',
+				component: {
+					template: '#no2',
+
+				}
+			},
+			{
+				path: '/no5',
+				component: {
+					template: '#no3',
+
+				},
+				children: [{
+						path: '/',
+						component: {
+							template: '#no7'
+						}
+					},
+					{
+						path: 'no2',
+						component: {
+							template: '#no8'
+						}
+					},
+					{
+						path: 'no3',
+						component: {
+							template: '#no9'
+						}
+					},
+				]
+			},
+		]
+		var router = new VueRouter({
+			routes
+		})
+		new Vue({
+			el: '#box',
+			router
+		})
+	</script>
+</html>
