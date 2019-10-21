@@ -1,62 +1,219 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+<head>
+<title>个人博客 — 一个站在javascript开发之路上的草根程序员个人博客网站</title>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="keywords" content="个人博客,个人博客,个人博客系统">
+<meta name="description" content="博客系统，一个站在javascript开发之路上的草根程序员个人博客网站。">
+<LINK rel="Bookmark" href="favicon.ico" >
+<LINK rel="Shortcut Icon" href="favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/staticRes/js/html5shiv.js"></script>
+<script type="text/javascript" src="/staticRes/js/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="plugin/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="plugin/pifu/pifu.css" />
+<!--[if lt IE 9]>
+<link href="/staticRes/lib/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } function showSide(){$('.navbar-nav').toggle();}</script>
+</head>
+<body>
+<header class="navbar-wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="container cl">
+            <a class="navbar-logo hidden-xs" href="index.html">
+                <!-- <img class="logo" src="img/logo.png" alt="个人博客" /> -->
+            </a>
+            <a class="logo navbar-logo-m visible-xs" href="index.html">个人博客</a>
+            <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:void(0);" onclick="showSide();">&#xe667;</a>
+            <nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
+                <ul class="cl"style="text-align: center;width: 100%;display: flex;padding-left: 500px;">
+                    <li class="active" style="display: inline-block !important;text-align: center !important;"> <a href="index.html" data-hover="首页">个人博客</a> </li>
+                    <!-- <li> <a href="about.html" data-hover="关于我">关于我</a> </li>
+                    <li> <a href="mood.html" data-hover="碎言碎语">碎言碎语</a> </li>
+                    <li><a href="article.html" data-hover="学无止尽">学无止尽</a></li> -->
+                   <!-- <li> <a href="board.html" data-hover="留言板">留言板</a> </li> -->
+                </ul>
+            </nav>
+            <nav class="navbar-nav navbar-userbar hidden-xs hidden-sm " style="top: 0;">
+                <ul class="cl">
+                    <li class="userInfo dropDown dropDown_hover">
+                            <!--<a href="javascript:;" ><img class="avatar radius" src="img/40.jpg" alt="丶似浅 "></a>
+                            <ul class="dropDown-menu menu radius box-shadow">
+                                <li><a href="/app/loginOut">退出</a></li>
+                            </ul>-->
+                            <!-- <a href="/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" ><img class="avatar size-S" src="img/qq.jpg" title="登入">登入</a> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
 
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		<script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
-		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<style>
-			*{
-				margin: 0;
-				padding: 0;
-				text-decoration: none;
-			}
-			[v-cloak] {
-				display: none;
-			}
-			#box{
-				background: url(img/qg.jpg) no-repeat;
-				background: cover;
-				width: 100%;
-				min-height: 800px;
-			}
-			
-		</style>
-	</head>
-
-	<body>
-		<div id="box" class="container" v-cloak="">
-			<div style="text-align: center;font-size: 50px;">
-				个人博客
+<section class="container pt-20">
+	<!--<div class="Huialert Huialert-info"><i class="Hui-iconfont">&#xe6a6;</i>成功状态提示</div>-->
+  <!--left-->
+  <div class="col-sm-9 col-md-9">
+  	<!--滚动图-->
+  	<div class="slider_main">
+            <div class="slider">
+                <div class="bd">
+                    <ul>
+                        <li><a href="#" target="_blank"><img src="temp/slide2.jpg"></a></li>
+                        <li><a href="#" target="_blank"><img src="temp/slide4.jpg"></a></li>
+                    </ul>
+                </div>
+                <ol class="hd cl dots">
+                    <li>1</li>
+                    <li>2</li>
+                </ol>
+                <a class="slider-arrow prev" href="javascript:void(0)"></a>
+                <a class="slider-arrow next" href="javascript:void(0)"></a>
+            </div>
+        </div>
+  		
+		<div class="mt-20 bg-fff box-shadow radius mb-5">
+			<div class="tab-category">
+				<a href=""><strong class="current">最新发布</strong></a>
 			</div>
-			<div style="font-size: 30px;">
-				作业
-			</div>
-			<div>
-				<a href="cha/index.html" style="color:black;font-size: 20px;">茶叶官网</a>
-			</div>
-			<div>
-				<a href="shuqi/1.html" style="color:black;font-size: 20px;">书旗小说</a>
-			</div>
-			<div>
-				<a href="j10.18/index.html" style="color:black;font-size: 20px;">资讯官网</a>
-			</div><strong></strong>
 		</div>
-	</body>
-	<script src="js/vue.js"></script>
-	<script src="js/vue-router.js"></script>
-	<script>
-		new Vue({
-			el: '#box',
-			
-		})
-	</script>
+		<div class="art_content">
+			<ul class="index_arc">
+				
+				
+				<li class="index_arc_item no_pic">
+					<h4 class="title"><a href="cha/index.html">茶</a></h4>
+					<div class="date_hits">
+						<span>项目时间</span>
+						<span>10.15</span>
+						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276 °</p>
+						<p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span id="sourceId::105" class="cy_cmt_count">20</span></p>
+					</div>
+					<div class="desc"><a href="cha/index.html"> 茶叶源于中国，茶叶最早是被作为祭品使用的。但从春秋后期就被人们作为菜食，在西汉中期发展为药用，西汉后期才发展为宫廷高级饮料，普及民间作为普通饮料那是西晋以后的事。发现最早人工种植茶叶的遗迹在浙江余姚的田螺山遗址，已有6000多年的历史。饮茶始于中国。</a></div>
+				</li>
+				<li class="index_arc_item no_pic">
+					<h4 class="title"><a href="shuqi/1.html">书旗</a></h4>
+					<div class="date_hits">
+						<span>项目时间</span>
+						<span>10.16</span>
+						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276 °</p>
+						<p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span id="sourceId::105" class="cy_cmt_count">20</span></p>
+					</div>
+					<div class="desc"><a href="shuqi/1.html"> 程如雪身为一个女特战队员，在配合警方扫黄时，扫到了自家男友是不是很悲催？然鹅，更悲催的还在后面，郁闷难过之下跑去酒吧买醉，一个喝多了没留神就把多年未见的邻家小弟给上了！上！了！上了之后的后遗症就是，这个邻家小弟为她入伍，一路从普通连队追到了她所在的特战队。人家都这么积极努力了……她该怎么办？当然是接受他啊！然后还要撩得他东南西北都分不清啊！</a></div>
+				</li>
+				<li class="index_arc_item no_pic">
+					<h4 class="title"><a href="j10.18/index.html">资讯网站</a></h4>
+					<div class="date_hits">
+						<span>项目时间</span>
+						<span>10.18</span>
+						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276 °</p>
+						<p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span id="sourceId::105" class="cy_cmt_count">20</span></p>
+					</div>
+					<div class="desc"><a href="j10.18/index.html"> 起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2015年底，在起飞页上创建的网站已超过10万+</a></div>
+				</li>
+				<li class="index_arc_item no_pic">
+					<h4 class="title"><a href="/article/5.html">qq音乐</a></h4>
+					<div class="date_hits">
+						<span>项目时间</span>
+						<span>10.19</span>
+						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276 °</p>
+						<p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span id="sourceId::105" class="cy_cmt_count">20</span></p>
+					</div>
+					<div class="desc"><a href="/article/5.html">QQ音乐隶属于中国在线音乐服务领航者腾讯音乐娱乐集团，是国内领先的音乐流媒体平台。自2005年创立至今，QQ音乐注册用户总量已达8亿。
+</a></div>
+				</li>
+				
+				</ul>
+  		<!-- <div class="text-c mb-20" id="moreBlog">
+	        <a class="btn  radius btn-block " href="javascript:;" onclick="moreBlog();">点击加载更多</a>
+	        <a class="btn  radius btn-block hidden" href="javascript:;">加载中……</a>
+	    </div> -->
+		</div>
+  </div>
+  
+  <!--right-->
+  <div class="col-sm-3 col-md-3">
+  	
+  	<!--站点声明-->
+        <div class="panel panel-default mb-20">
+            <div class="panel-body">
+                <i class="Hui-iconfont" style="float: left;">&#xe62f;&nbsp;</i>
+                <div class="slideTxtBox">
+                    <div class="bd">
+                        <ul>
+                            <li><a href="javascript:void(0);">欢迎访问</a></li>
+                            <li><a href="javascript:void(0);">大吉大利</a></li>
+                            <li><a href="javascript:void(0);">本站内容仅供学习和参阅，不做任何商业用途</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  	<!--博主信息-->
+        <div class="bg-fff box-shadow radius mb-20">
+            <div class="tab-category">
+                <a href=""><strong>博主信息</strong></a>
+            </div>
+            <div class="tab-category-item">
+                <ul class="index_recd">
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe653;</i>姓名：张松</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe70d;</i>职业：javascript开发</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe63b;</i>邮箱：<a href="mailto:wfyv@qq.com">xxx@qq.com</a></li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe671;</i>定位：中国 &middot; 中国</li>
+                </ul>
+            </div>
+        </div>
+  	
+  	
+  	
+	
+	
+	
 
+  </div>
+  
+</section>
+<footer class="footer mt-20">
+    <div class="container-fluid" id="foot">
+        <p>Copyright &copy; 2016-2017 www.wfyvv.com <br>
+            <a href="#" target="_blank">皖ICP备17002922号</a> <a href="" target="_blank"></a><br>
+        </p>
+    </div>
+</footer>
+<script type="text/javascript" src="plugin/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="plugin/layer/3.0/layer.js"></script>
+<script type="text/javascript" src="plugin/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="plugin/pifu/pifu.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script> $(function(){ $(window).on("scroll",backToTopFun); backToTopFun(); }); </script>
+<script type="text/javascript" src="plugin/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+
+<script>
+$(function(){
+//幻灯片
+jQuery(".slider_main .slider").slide({mainCell: ".bd ul", titCell: ".hd li", trigger: "mouseover", effect: "leftLoop", autoPlay: true, delayTime: 700, interTime: 2000, pnLoop: true, titOnClassName: "active"})
+//tips
+jQuery(".slideTxtBox").slide({titCell: ".hd ul", mainCell: ".bd ul", autoPage: true, effect: "top", autoPlay: true});
+//标签
+	$(".tags a").each(function(){
+		var x = 9;
+		var y = 0;
+		var rand = parseInt(Math.random() * (x - y + 1) + y);
+		$(this).addClass("tags"+rand)
+	});
+	
+	$("img.lazyload").lazyload({failurelimit : 3});
+});
+
+</script> 
+
+</body>
 </html>
